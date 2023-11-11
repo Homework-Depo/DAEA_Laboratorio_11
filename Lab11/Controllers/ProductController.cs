@@ -58,6 +58,7 @@ namespace Lab11.Controllers
     {
       if (ModelState.IsValid)
       {
+        product.Active = true;
         _context.Add(product);
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
